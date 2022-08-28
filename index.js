@@ -1,13 +1,51 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  // reverse the input string
+  const reversedWord = reverseString(word);
+  // compare the reversed string to the input
+  return word === reversedWord;
+}
+
+function reverseString(word) {
+  return word.split("").reverse().join("");
+}
+
+
+/*function  reverseString(word) {
+
+ // Write your algorithm here
+    // create an array from the input string
+    const wordArray = word.split("");
+    // reverse the array
+    const reversedWordArray = wordArray.reverse();
+    // create a string from the reversed array
+    const reversedWord = reversedWordArray.join("");
+    // return the reversed string
+    return reversedWord;
+  }
+function isPalindrome(word) {
+  // reverse the input string
+  const reversedWord = reverseString(word);
+  // if the reversed string is the same as the input
+  if (word === reversedWord) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /* 
   Add your pseudocode here
+  create an array from the input string
+reverse the array
+create a string from the reversed array
+return the reversed string
 */
 
 /*
-  Add written explanation of your solution here
+  Add written explanation of your solution here 
+  the function reversestring functions reverses the string after splitting it and
+  joining it before passing it to the isPalendrome function to confirm if 
+  the word is a palendrom
 */
 
 // You can run `node index.js` to view these console logs
